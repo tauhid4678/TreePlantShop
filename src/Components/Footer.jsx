@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-10 font-medium text-gray-300">
+        <div className="mt-10 flex flex-col sm:flex-row items-center gap-6 md:gap-10 font-medium text-gray-300 delius-swash-caps-regular">
           <a className="hover:text-green-500 transition-colors" href="#">
             About
           </a>
@@ -31,7 +31,9 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center md:items-start">
-          <h2 className="font-semibold text-lg mb-4">Follow Us</h2>
+          <h2 className="font-semibold text-lg mb-4 delius-swash-caps-regular">
+            Follow Us
+          </h2>
           <div className="flex gap-6">
             <a
               href="#"
