@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import useAuth from "../hooks/useAuth";
-import { Leaf, MailPlus, Lock, Eye, EyeOff } from "lucide-react";
+import { MailPlus, Lock, Eye, EyeOff } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
+import { GiLindenLeaf } from "react-icons/gi";
 export default function Login() {
   const { signIn, googleSignIn, resetPassword } = useAuth();
   const navigate = useNavigate();
@@ -57,16 +58,6 @@ export default function Login() {
       <div className="grid lg:grid-cols-2 min-h-screen">
         <div className="flex items-center justify-center px-6 py-12">
           <div className="w-full max-w-md">
-            {/* Brand */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-green-700 text-white flex items-center justify-center">
-                <Leaf />
-              </div>
-              <h1 className="text-2xl font-semibold text-green-600 delius-swash-caps-regular">
-                GreenNest
-              </h1>
-            </div>
-
             <h2 className="mt-10 text-4xl font-semibold  delius-swash-caps-regular">
               Welcome Back
             </h2>
@@ -173,8 +164,8 @@ export default function Login() {
 
         <div className="hidden lg:flex items-center justify-center bg-gradient-to-b from-[#204636] to-[#183629] text-white px-10">
           <div className="text-center max-w-lg">
-            <div className="mx-auto w-20 h-20 rounded-full bg-green-700 flex items-center justify-center">
-              <Leaf />
+            <div className="mx-auto w-20 h-20 rounded-full bg-white text-green-700 flex items-center justify-center">
+              <GiLindenLeaf size={35} />
             </div>
 
             <h3 className="mt-8 text-5xl font-semibold delius-swash-caps-regular">

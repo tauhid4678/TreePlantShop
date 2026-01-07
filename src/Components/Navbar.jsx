@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Leaf, CircleX, Menu } from "lucide-react";
+import { GiLindenLeaf } from "react-icons/gi";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,7 +9,7 @@ export default function Navbar() {
     <nav className="flex justify-between items-center px-6 md:px-10 py-4 shadow-md bg-white">
       <div className="flex items-center">
         <div className="bg-green-700 p-1 rounded-[50%] text-xl text-white ">
-          <Leaf />
+          <GiLindenLeaf size={24} />
         </div>
         <h1 className="font-semibold ml-2 text-xl md:text-2xl text-green-700 delius-swash-caps-regular">
           <a href="/">GreenNest</a>

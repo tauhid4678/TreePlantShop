@@ -1,5 +1,6 @@
 import React from "react";
-import { Leaf, Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
+import { GiLindenLeaf } from "react-icons/gi";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start space-y-4">
           <div className="flex items-center">
             <div className="bg-green-700 p-2 rounded-full text-white">
-              <Leaf size={24} />
+              <GiLindenLeaf size={24} />
             </div>
             <h1 className="font-bold ml-3 text-2xl delius-swash-caps-regular">
               <a href="/" className="hover:text-green-400 transition-colors">
