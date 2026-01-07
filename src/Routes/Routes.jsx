@@ -3,6 +3,7 @@ import Mainlayout from "../Layouts/Mainlayout";
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import Plants from "../Pages/Plants";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,12 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Register />,
+      },
+
+      {
+        path: "plants",
+        element: <Plants />,
+        loader: () => fetch("/plants.json"),
       },
     ],
   },
