@@ -4,10 +4,12 @@ import PlantCards from "../Components/PlantCards";
 import HeroSlider from "../Components/HeroSlider";
 import PlantCareTips from "../Components/PlantCareTips";
 import ExpertsSection from "../Components/ExpertsSection";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const plants = useLoaderData();
   const topplants = plants.slice(0, 6);
+  const navigate = useNavigate();
 
   return (
     <div className="bg-[#FBFBF7]">
@@ -38,7 +40,7 @@ export default function Home() {
         {/* See More Button */}
         <div className="py-12">
           <button
-            onClick={() => window.open("/plants", "_blank")}
+            onClick={() => navigate("/plants")}
             className="w-44 h-12 flex items-center justify-center gap-2 bg-green-200 text-black font-bold rounded-xl hover:scale-105 transition hover:bg-green-600 hover:text-white delius-swash-caps-regular"
           >
             View All Plants
