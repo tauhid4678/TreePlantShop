@@ -1,13 +1,11 @@
-
 import { initializeApp } from "firebase/app";
-
 const firebaseConfig = {
-    apiKey: "AIzaSyD5EDvrcLWj-AeSxJ_P51zDcLUNpjNeZMI",
-    authDomain: "treeplants-auth.firebaseapp.com",
-    projectId: "treeplants-auth",
-    storageBucket: "treeplants-auth.firebasestorage.app",
-    messagingSenderId: "680181759734",
-    appId: "1:680181759734:web:faee9672b25fff2da7b6d7",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 export const app = initializeApp(firebaseConfig);
