@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Mainlayout from "../Layouts/Mainlayout";
 import Home from "../Pages/Home";
+import Login from "../Pages/Login";
 
 const router = createBrowserRouter([
   {
@@ -9,8 +10,13 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home></Home>,
+        element: <Home />,
         loader: () => fetch("/plants.json"),
+      },
+
+      {
+        path: "login",
+        element: <Login />,
       },
     ],
   },

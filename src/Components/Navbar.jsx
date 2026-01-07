@@ -14,7 +14,7 @@ export default function Navbar() {
           <a href="/">GreenNest</a>
         </h1>
       </div>
-      {/* for desktop  */}
+
       <ul className="hidden md:flex gap-6 text-lg font-semibold delius-swash-caps-regular ">
         <a className="hover:text-green-600 hover:text-xl" href="./">
           Home
