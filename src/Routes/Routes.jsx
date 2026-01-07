@@ -4,6 +4,8 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Plants from "../Pages/Plants";
+import PlantDetails from "../Pages/PlantDetails";
+import PrivateRoute from "../Components/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,15 @@ const router = createBrowserRouter([
       {
         path: "plants",
         element: <Plants />,
+        loader: () => fetch("/plants.json"),
+      },
+      {
+        path: "plants/:id",
+        element: (
+          <PrivateRoute>
+            <PlantDetails />
+          </PrivateRoute>
+        ),
         loader: () => fetch("/plants.json"),
       },
     ],
