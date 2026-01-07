@@ -22,7 +22,6 @@ export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Create account (Signup)
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
@@ -44,14 +43,20 @@ export default function AuthProvider({ children }) {
   };
 
   const resetPassword = (email) => {
-    return sendPasswordResetEmail(auth, email);
+    setLoading(true);
+    return sendPasswordResetEmail(auth, email).finally(() => setLoading(false));
   };
 
-  const updateUserProfile = (name, photoURL) => {
-    return updateProfile(auth.currentUser, {
-      displayName: name,
-      photoURL: photoURL,
-    });
+  const updateUserProfile = async (name, photoURL) => {
+    setLoading(true);
+    try {
+      await updateProfile(auth.currentUser, {
+        displayName: name,
+        photoURL: photoURL,
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
