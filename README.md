@@ -141,8 +141,9 @@ Tips
 
 ![Tips Section](./screenshots/tips.png)
 
-Review 
-![Review Section ](./screenshots/review.png)
+Team Section 
+
+![Teams Section ](./screenshots/review.png)
 
 
 ---
